@@ -20,7 +20,7 @@ jobs:
         if: success()  # Աշխատի միայն եթե մինչև այս ամեն ինչ OK է
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << EOF
-            cd /home/${{ secrets.SSH_USERNAME }}/my-todo-app
+            cd /home/${{ secrets.SSH_USERNAME }}/todo
             git reset --hard
             git pull origin main
             pm2 restart hsahakyanproject
