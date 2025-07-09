@@ -19,7 +19,7 @@ jobs:
       - name: Deploy via password SSH
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "
-          cd /home/${{ secrets.SSH_USERNAME }}/my-todo-app &&
+          cd /home/${{ secrets.SSH_USERNAME }}/todo &&
           git reset --hard &&
           git pull &&
           pm2 restart hsahakyanproject"
