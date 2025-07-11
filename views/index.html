@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My To-Do App</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>📝 My To-Do List</h1>
@@ -27,10 +27,8 @@
       list.innerHTML = tasks.map(t => `<li>${t.task}</li>`).join('');
     }
 
-    // initial fetch when page loads
     fetchTasks();
 
-    // When Show All button is clicked
     document.getElementById('show-btn').addEventListener('click', fetchTasks);
   </script>
 </body>
